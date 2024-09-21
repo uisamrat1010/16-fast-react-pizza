@@ -23,7 +23,7 @@ function Order() {
     [fetcher],
   );
 
-  console.log(fetcher.data);
+  //console.log(fetcher.data);
 
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const {
@@ -69,7 +69,7 @@ function Order() {
         {cart.map((item) => (
           <OrderItem
             item={item}
-            key={item.id}
+            key={item.pizzaId}
             isLoadingIngredients={fetcher.state === 'loading'}
             ingredients={
               fetcher.data?.find((el) => el.id === item.pizzaId)?.ingredients ??

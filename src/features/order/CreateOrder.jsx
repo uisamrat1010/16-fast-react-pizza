@@ -32,7 +32,7 @@ function CreateOrder() {
   const isLoadingAddress = addressStatus === 'loading';
 
   const cart = useSelector((state) => state.cart.cart);
-  console.log(cart);
+  //console.log(cart);
 
   const totalCartPrice = useSelector((state) =>
     state.cart.cart.reduce((sum, item) => sum + item.unitPrice, 0),
@@ -151,7 +151,7 @@ export async function action({ request }) {
     priority: data.priority === 'true',
   };
 
-  console.log(order);
+  //console.log(order);
 
   const errors = {};
 
